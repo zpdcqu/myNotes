@@ -74,6 +74,80 @@
                                 "children": []
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "ciqx2ft83zc0",
+                            "created": 1648005144675,
+                            "text": "27 移除元素"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ciqx2vdb1280",
+                                    "created": 1648005178541,
+                                    "text": "26 删除排序数组中的重复项"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ciqx33860f40",
+                                    "created": 1648005195645,
+                                    "text": "283 移动0"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ciqx36j7icw0",
+                                    "created": 1648005202843,
+                                    "text": "844 比较退格的字符串"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ciqx3htase00",
+                                    "created": 1648005227398,
+                                    "text": "977 有序数组的平方"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ciqx43rbp5s0",
+                            "created": 1648005275167,
+                            "text": "209 长度最小的子数组"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ciqx5cm295c0",
+                                    "created": 1648005372804,
+                                    "text": "904 水果成蓝"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ciqx5fd27o80",
+                                    "created": 1648005378790,
+                                    "text": "76 最小覆盖子串"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ciqx6jujhpc0",
+                            "created": 1648005466919,
+                            "text": "59 螺旋矩阵"
+                        },
+                        "children": []
                     }
                 ]
             },
@@ -85,7 +159,74 @@
                     "expandState": "expand",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "ciqx7jl4ltc0",
+                            "created": 1648005544714,
+                            "text": "203 移除链表元素"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciqx7o2gprs0",
+                            "created": 1648005554469,
+                            "text": "707 设计链表"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciqx8t4k5kw0",
+                            "created": 1648005643844,
+                            "text": "206 反转链表",
+                            "progress": 5
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciqx95d0j5c0",
+                            "created": 1648005670477,
+                            "text": "25. K 个一组翻转链表",
+                            "progress": 5
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciqxa8rh1940",
+                            "created": 1648005756245,
+                            "text": "24. 两两交换链表中的节点"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciqxagnztcw0",
+                            "created": 1648005773449,
+                            "text": "19.删除链表的倒数第N个节点"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciqxb7hamkg0",
+                            "created": 1648005831817,
+                            "text": "面试题 02.07. 链表相交"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciqxbg1wtmw0",
+                            "created": 1648005850478,
+                            "text": "142.环形链表II"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
