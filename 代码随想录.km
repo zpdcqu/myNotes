@@ -25,7 +25,8 @@
                                 "data": {
                                     "id": "cip62377jm00",
                                     "created": 1647827387299,
-                                    "text": "35 搜索插入的位置"
+                                    "text": "35 搜索插入的位置 ",
+                                    "progress": 9
                                 },
                                 "children": []
                             },
@@ -33,7 +34,9 @@
                                 "data": {
                                     "id": "cip62827tig0",
                                     "created": 1647827397881,
-                                    "text": "34 在排序数组中查找元素的第一个和最后一个位置"
+                                    "text": "34 在排序数组中查找元素的第一个和最后一个位置",
+                                    "progress": 5,
+                                    "note": "```\nclass Solution {\n    public int[] searchRange(int[] nums, int target) {\n        int[] res = new int[]{-1,-1};\n        res[0] = binarySearch(nums,target,true);\n        res[1] = binarySearch(nums,target,false);\n        return res;\n    }\n\n    private int binarySearch(int[] nums,int target,boolean leftOrRight){\n        int res  = -1;\n        int left = 0;\n        int right = nums.length-1;\n        int mid;\n        while(left<=right){\n             mid = left+(right-left)/2;\n            if(target < nums[mid]){\n                right = mid -1;\n            }else if(target > nums[mid]){\n                left = mid +1;\n            }else{\n                res = mid;\n                if(leftOrRight){\n                    right=mid - 1;\n                }else{\n                    left = mid +1;\n                }\n            }\n\n        }\n        return res;\n    }\n}\n\n```"
                                 },
                                 "children": []
                             },
