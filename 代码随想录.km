@@ -159,7 +159,7 @@
                     "id": "cip5u7hprfs0",
                     "created": 1647826769728,
                     "text": "链表",
-                    "expandState": "collapse",
+                    "expandState": "expand",
                     "layout": null
                 },
                 "children": [
@@ -273,7 +273,9 @@
                                 "data": {
                                     "id": "ciths0w4r480",
                                     "created": 1648266691779,
-                                    "text": "49 字母异位词分组"
+                                    "text": "49 字母异位词分组",
+                                    "progress": 3,
+                                    "note": "```\nclass Solution {\n    public boolean canConstruct(String ransomNote, String magazine) {\n        int[] record = new int[26];\n        for(int i = 0;i<magazine.length();i++){\n            record[magazine.charAt(i)-'a']+=1;\n        }\n        for(int i = 0 ; i<ransomNote.length();i++){\n            record[ransomNote.charAt(i)-'a']-=1;\n            if(record[ransomNote.charAt(i)-'a']<0){\n                return false;\n            }\n        }\n        return true;\n    }\n}\n```"
                                 },
                                 "children": []
                             },
@@ -281,7 +283,9 @@
                                 "data": {
                                     "id": "cithsbz9nvk0",
                                     "created": 1648266715913,
-                                    "text": "438 找到字符串中所有字母异位词"
+                                    "text": "438 找到字符串中所有字母异位词",
+                                    "note": "```\nclass Solution {\n    public List<List<String>> groupAnagrams(String[] strs) {\n        HashMap<String,ArrayList<String>> map = new HashMap<>();\n        for(String s:strs){\n            char[] ch = s.toCharArray();\n            Arrays.sort(ch);\n            String key = String.valueOf(ch);\n            if(!map.containsKey(key)) map.put(key,new ArrayList<>());\n            map.get(key).add(s);\n        }\n        return new ArrayList(map.values());\n    }\n}\n\n```",
+                                    "progress": 5
                                 },
                                 "children": []
                             }
@@ -291,14 +295,17 @@
                         "data": {
                             "id": "cithssuiys00",
                             "created": 1648266752632,
-                            "text": "349 两个数组的交集"
+                            "text": "349 两个数组的交集",
+                            "note": "````\nclass Solution {\n    public int[] intersection(int[] nums1, int[] nums2) {\n        if(nums1==null || nums2==null) return null;\n        Set<Integer> set1 = new HashSet<>();\n        Set<Integer> reset = new HashSet<>();\n        for(int i = 0;i<nums1.length;i++){\n            set1.add(nums1[i]);\n        }\n        for(int i = 0;i<nums2.length;i++){\n            if(set1.contains(nums2[i])){\n                reset.add(nums2[i]);\n            }\n        }\n        int[] res = new int[reset.size()];\n        int i = 0;\n        for(Integer item:reset){\n            res[i++]=item;\n        }\n        return res;\n    }\n}\n```",
+                            "progress": 5
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cithszx4yqo0",
                                     "created": 1648266768027,
-                                    "text": "350 两个数组交集2"
+                                    "text": "350 两个数组交集2",
+                                    "note": null
                                 },
                                 "children": []
                             }
