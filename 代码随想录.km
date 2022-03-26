@@ -86,7 +86,9 @@
                                 "data": {
                                     "id": "ciqx2vdb1280",
                                     "created": 1648005178541,
-                                    "text": "26 删除排序数组中的重复项"
+                                    "text": "26 删除排序数组中的重复项",
+                                    "note": "```\nclass Solution {\n    public int removeDuplicates(int[] nums) {\n        int slow = 0;\n        for(int i = 0;i<nums.length;i++){\n            if(nums[slow]!=nums[i]){\n                 slow++;\n                nums[slow] = nums[i];\n               \n            }\n        }\n        return slow+1;\n    }\n}\n\n\n\n```",
+                                    "progress": 5
                                 },
                                 "children": []
                             },
@@ -120,7 +122,8 @@
                         "data": {
                             "id": "ciqx43rbp5s0",
                             "created": 1648005275167,
-                            "text": "209 长度最小的子数组"
+                            "text": "209 长度最小的子数组",
+                            "note": "```\n\n\nclass Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int sum = 0;\n        int result = Integer.MAX_VALUE;\n         int left = 0;\n        for(int right = 0;right<nums.length;right++){\n            sum+=nums[right];\n            while(sum>=target){\n                result = Math.min(result,right-left+1);\n                sum = sum - nums[left++];\n            }\n        }\n        return result==Integer.MAX_VALUE?0:result;\n    }\n}\n\n```"
                         },
                         "children": [
                             {
@@ -222,7 +225,9 @@
                         "data": {
                             "id": "ciqxbg1wtmw0",
                             "created": 1648005850478,
-                            "text": "142.环形链表II"
+                            "text": "142.环形链表II",
+                            "note": "```\npublic class Solution {\n    public ListNode detectCycle(ListNode head) {\n        ListNode fast = head;\n        ListNode slow = head;\n        while(fast!=null && fast.next!=null){\n            fast = fast.next.next;\n            slow = slow.next;\n            if(fast == slow){\n                ListNode index1  = fast;\n                ListNode index2 = head;\n                while(index1!=index2){\n                    index1 = index1.next;\n                    index2  = index2.next;\n                }\n                return index1;\n            }\n        }\n        return null;\n    }\n}\n    ",
+                            "progress": 5
                         },
                         "children": []
                     }
