@@ -254,14 +254,18 @@
                             "id": "cithri0ta540",
                             "created": 1648266650704,
                             "text": "242 有效的字母异位词",
-                            "expandState": "expand"
+                            "expandState": "expand",
+                            "note": "```\nclass Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length()!=t.length()){\n            return false;\n        }\n        char[] sArray = s.toCharArray();\n        char[] tArray = t.toCharArray();\n        int[] record  = new int[26];\n        for(int i = 0; i< sArray.length;i++){\n            record[sArray[i]-'a']+=1;\n        }\n        for(int i = 0; i< tArray.length;i++){\n            record[tArray[i]-'a']-=1;\n        }\n         for(int i = 0; i< tArray.length;i++){\n            if (record[tArray[i]-'a']!=0){\n                return false;\n            }\n        }\n        return true;\n        \n\n    }\n}\n```",
+                            "progress": 5
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cithrt7wins0",
                                     "created": 1648266675077,
-                                    "text": "383 赎金信"
+                                    "text": "383 赎金信",
+                                    "progress": 5,
+                                    "note": "```\nclass Solution {\n    public boolean canConstruct(String ransomNote, String magazine) {\n        int[] record = new int[26];\n        for(int i = 0;i<magazine.length();i++){\n            record[magazine.charAt(i)-'a']+=1;\n        }\n        for(int i = 0 ; i<ransomNote.length();i++){\n            record[ransomNote.charAt(i)-'a']-=1;\n            if(record[ransomNote.charAt(i)-'a']<0){\n                return false;\n            }\n        }\n        return true;\n    }\n}\n```"
                                 },
                                 "children": []
                             },
