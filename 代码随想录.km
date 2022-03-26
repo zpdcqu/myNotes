@@ -305,7 +305,8 @@
                                     "id": "cithszx4yqo0",
                                     "created": 1648266768027,
                                     "text": "350 两个数组交集2",
-                                    "note": null
+                                    "note": "```\nclass Solution {\n    public int[] intersect(int[] nums1, int[] nums2) {\n        List<Integer> list1 = new ArrayList<>();\n        List<Integer> list2 = new ArrayList<>();\n\n\n        for(int i = 0;i<nums1.length;i++){\n            list1.add(nums1[i]);\n        }\n\n        for(int i=0;i<nums2.length;i++){\n            if(list1.contains(nums2[i])){\n                list1.remove(Integer.valueOf(nums2[i]));\n                list2.add(nums2[i]);\n            }\n        }\n        int[] res = new int[list2.size()];\n        int i = 0;\n        for(Integer s:list2){\n            res[i++] = s;\n        }\n        return res;\n       \n    }\n}\n```",
+                                    "progress": 5
                                 },
                                 "children": []
                             }
