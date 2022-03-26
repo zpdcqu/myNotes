@@ -12,7 +12,7 @@
                     "id": "cip5u6lftu80",
                     "created": 1647826767776,
                     "text": "数组",
-                    "expandState": "expand",
+                    "expandState": "collapse",
                     "layout": null
                 },
                 "children": [
@@ -159,7 +159,7 @@
                     "id": "cip5u7hprfs0",
                     "created": 1647826769728,
                     "text": "链表",
-                    "expandState": "expand",
+                    "expandState": "collapse",
                     "layout": null
                 },
                 "children": [
@@ -248,17 +248,168 @@
                     "expandState": "expand",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cithri0ta540",
+                            "created": 1648266650704,
+                            "text": "242 有效的字母异位词",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cithrt7wins0",
+                                    "created": 1648266675077,
+                                    "text": "383 赎金信"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "ciths0w4r480",
+                                    "created": 1648266691779,
+                                    "text": "49 字母异位词分组"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cithsbz9nvk0",
+                                    "created": 1648266715913,
+                                    "text": "438 找到字符串中所有字母异位词"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cithssuiys00",
+                            "created": 1648266752632,
+                            "text": "349 两个数组的交集"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cithszx4yqo0",
+                                    "created": 1648266768027,
+                                    "text": "350 两个数组交集2"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cithswkppg80",
+                            "created": 1648266760746,
+                            "text": "202 快乐数"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cithtdg8c7k0",
+                            "created": 1648266797480,
+                            "text": "1 两数之和",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cithtnyy7aw0",
+                                    "created": 1648266820380,
+                                    "text": "454 四数相加"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cithtsr66pk0",
+                                    "created": 1648266830793,
+                                    "text": "15 三数之和"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cithubvrwo80",
+                                    "created": 1648266872431,
+                                    "text": "18 四数之和"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "data": {
                     "id": "cip5umbsra00",
                     "created": 1647826802022,
                     "text": "字符串",
-                    "expandState": "expand",
+                    "expandState": "collapse",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cithx9erc540",
+                            "created": 1648267102141,
+                            "text": "反转字符串"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cithxd76t4w0",
+                            "created": 1648267110390,
+                            "text": "反转字符串2"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cithxl41uog0",
+                            "created": 1648267127614,
+                            "text": "替换空格"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cithxn7fo5k0",
+                            "created": 1648267132173,
+                            "text": "反转字符串中的单词"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cithxsvt6wo0",
+                            "created": 1648267144530,
+                            "text": "左旋转字符串"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cithxvlmvmw0",
+                            "created": 1648267150446,
+                            "text": "实现strstr"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cithxyob51c0",
+                            "created": 1648267157138,
+                            "text": "重复的子字符串"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
@@ -285,10 +436,228 @@
                     "id": "cip5v0wfbps0",
                     "created": 1647826833744,
                     "text": "二叉树",
-                    "expandState": "expand",
+                    "expandState": "collapse",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "citr045fwe80",
+                            "created": 1648292715775,
+                            "text": "基础"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "citr0amzkr40",
+                                    "created": 1648292729897,
+                                    "text": "二叉树理论基础"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "citr0edif0w0",
+                                    "created": 1648292738031,
+                                    "text": "二叉树的递归遍历"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "citr0ideknk0",
+                                    "created": 1648292746731,
+                                    "text": "二叉树的迭代遍历"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "citr0ogz7q80",
+                                    "created": 1648292760008,
+                                    "text": "二叉树的层序遍历"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "citr0vlfzxc0",
+                            "created": 1648292775516,
+                            "text": "226 反转二叉树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr16hi1co0",
+                            "created": 1648292799222,
+                            "text": "101 对称二叉树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr1h3hg4w0",
+                            "created": 1648292822319,
+                            "text": "104 二叉树的最大深度"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr1tsvn340",
+                            "created": 1648292849976,
+                            "text": "111 二叉树的最小深度"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr23zym4g0",
+                            "created": 1648292872172,
+                            "text": "222 完全二叉树的节点个数"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr2euavv40",
+                            "created": 1648292895774,
+                            "text": "110平衡二叉树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr2rfl5r40",
+                            "created": 1648292923183,
+                            "text": "257 二叉树的所有路径"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr3ai3p2g0",
+                            "created": 1648292964694,
+                            "text": "404 左叶子之和"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr3w6s01s0",
+                            "created": 1648293011898,
+                            "text": "513 找树左下角的值"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr46bt6j40",
+                            "created": 1648293033970,
+                            "text": "112 路径之和"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr4ezu0jk0",
+                            "created": 1648293052837,
+                            "text": "106 从中序和后序遍历序列构造二叉树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr4t7h04g0",
+                            "created": 1648293083774,
+                            "text": "654 最大二叉树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr50qmzv40",
+                            "created": 1648293100170,
+                            "text": "617 合并二叉树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr55o0s680",
+                            "created": 1648293110896,
+                            "text": "700 二叉搜索树中的搜索"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr5g8smjc0",
+                            "created": 1648293133920,
+                            "text": "98 验证二叉搜索树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr5lwv2eg0",
+                            "created": 1648293146259,
+                            "text": "530 二叉搜索树的最小绝对差"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr60x6vfk0",
+                            "created": 1648293178931,
+                            "text": "501 二叉搜索树的众数"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr6bqlzfc0",
+                            "created": 1648293202477,
+                            "text": "236 二叉搜索树的最近公共祖先"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr6i2dsx40",
+                            "created": 1648293216250,
+                            "text": "701 二叉搜索树中的插入操作"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr7saaee80",
+                            "created": 1648293316860,
+                            "text": "450 删除二叉搜索树中的节点"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr80q8g2g0",
+                            "created": 1648293335238,
+                            "text": "108 将有序数组转换为二叉搜索树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "citr8ka0ghs0",
+                            "created": 1648293377793,
+                            "text": "538 把二叉搜索树转换为累加树"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
