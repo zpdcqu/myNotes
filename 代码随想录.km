@@ -316,7 +316,9 @@
                         "data": {
                             "id": "cithswkppg80",
                             "created": 1648266760746,
-                            "text": "202 快乐数"
+                            "text": "202 快乐数",
+                            "note": "```\nclass Solution {\n    public boolean isHappy(int n) {\n        HashSet<Integer> set = new HashSet<>();\n        while(n!=1&&!set.contains(n)){\n            set.add(n);\n            n = next(n);\n        }\n        if (n!=1){\n            return false;\n        }\n        return true;\n    }\n\n    public int next(int n){\n        int sum = 0;\n        while(n>0){\n            int m = n%10;\n            n = n/10;\n            sum+=m*m;\n        }\n        return sum;\n    }\n}\n```",
+                            "progress": 5
                         },
                         "children": []
                     },
@@ -325,7 +327,9 @@
                             "id": "cithtdg8c7k0",
                             "created": 1648266797480,
                             "text": "1 两数之和",
-                            "expandState": "expand"
+                            "expandState": "expand",
+                            "progress": 5,
+                            "note": "# 哈希\n```\nclass Solution {\n    public int[] twoSum(int[] nums, int target) {\n        Map<Integer,Integer>map = new HashMap<>();\n        for(int i=0;i<nums.length;i++){\n            if(map.containsKey(target-nums[i])){\n                return new int[]{i,map.get(target-nums[i])};\n            \n            }\n            map.put(nums[i],i);\n        }\n        return new int[2];\n    }\n}\n```\n"
                         },
                         "children": [
                             {
@@ -333,14 +337,6 @@
                                     "id": "cithtnyy7aw0",
                                     "created": 1648266820380,
                                     "text": "454 四数相加"
-                                },
-                                "children": []
-                            },
-                            {
-                                "data": {
-                                    "id": "cithtsr66pk0",
-                                    "created": 1648266830793,
-                                    "text": "15 三数之和"
                                 },
                                 "children": []
                             },
@@ -431,7 +427,18 @@
                     "expandState": "expand",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cithtsr66pk0",
+                            "created": 1648266830793,
+                            "text": "15 三数之和",
+                            "progress": 5,
+                            "note": "```\nclass Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        List<List<Integer>> res = new ArrayList<>();\n        int len = nums.length;\n        Arrays.sort(nums);\n        for(int i = 0;i<len-2;++i){\n            if(i==0 || i>0 && nums[i]!=nums[i-1]){\n                int l = i+1;\n                int r = len-1;\n                while(l<r){\n                    if(nums[i]+nums[l]+nums[r]>0){\n                        while(l<r && nums[r]==nums[r-1]){\n                            r--;\n                        }\n                        r--;\n                    }else if(nums[i]+nums[l]+nums[r]<0){\n                        while(l<r && nums[l]==nums[l+1]){\n                            l++;\n                        }\n                        l++;\n                    }else{\n                        res.add(Arrays.asList(nums[i],nums[l],nums[r]));\n                         while(l<r && nums[r]==nums[r-1]){\n                            r--;\n                        }\n                         while(l<r && nums[l]==nums[l+1]){\n                            l++;\n                        }\n                        l++;\n                        r--;\n                    }\n                   \n                }\n            }\n        }\n        return res;\n    }\n}\n```"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
