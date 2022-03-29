@@ -357,7 +357,7 @@
                     "id": "cip5umbsra00",
                     "created": 1647826802022,
                     "text": "字符串",
-                    "expandState": "collapse",
+                    "expandState": "expand",
                     "layout": null
                 },
                 "children": [
@@ -365,7 +365,9 @@
                         "data": {
                             "id": "cithx9erc540",
                             "created": 1648267102141,
-                            "text": "反转字符串"
+                            "text": "344 反转字符串",
+                            "progress": 5,
+                            "note": "```\nclass Solution {\n    public void reverseString(char[] s) {\n        int i=0,j=s.length-1;\n        while(i<j){\n            char tmp = s[i];\n            s[i] = s[j];\n            s[j]=tmp;\n            i++;\n            j--;\n        }\n    }\n}\n\n```"
                         },
                         "children": []
                     },
@@ -373,7 +375,9 @@
                         "data": {
                             "id": "cithxd76t4w0",
                             "created": 1648267110390,
-                            "text": "反转字符串2"
+                            "text": "反转字符串2",
+                            "progress": 5,
+                            "note": "```\nclass Solution {\n    public String reverseStr(String s, int k) {\n        char[] arr = s.toCharArray();\n        int len = arr.length;\n        for(int i = 0; i<len;i+=2*k){\n            reverse(arr,i,Math.min(i+k,len)-1);\n        }\n        return new String(arr);\n    }\n    private void reverse(char[] arr,int start,int end){\n        while(start<end){\n            char temp = arr[start];\n            arr[start] = arr[end];\n            arr[end] = temp;\n            start++;\n            end--;\n        }\n    }\n}\n```"
                         },
                         "children": []
                     },
@@ -381,7 +385,9 @@
                         "data": {
                             "id": "cithxl41uog0",
                             "created": 1648267127614,
-                            "text": "替换空格"
+                            "text": "剑指offer 05  替换空格",
+                            "progress": 5,
+                            "note": "```\nclass Solution {\n    public String replaceSpace(String s) {\n        int len = s.length();\n        StringBuilder sb = new StringBuilder();\n\n        for(int i=0;i<len;i++){\n            char c = s.charAt(i);\n            if (c==' ' ){\n                sb.append(\"%20\");\n            }else{\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n}\n\n```"
                         },
                         "children": []
                     },
@@ -389,7 +395,9 @@
                         "data": {
                             "id": "cithxn7fo5k0",
                             "created": 1648267132173,
-                            "text": "反转字符串中的单词"
+                            "text": "反转字符串中的单词",
+                            "progress": 5,
+                            "note": "```\nclass Solution {\n   public String reverseWords(String s) {\n\tString[] strs = s.split(\" \");\n\tStringBuffer buffer = new StringBuffer();\n\tfor (int i = 0; i < strs.length; i++) {\n\t\tbuffer.append(new StringBuffer(strs[i]).reverse().toString());\n\t\tbuffer.append(\" \");\n\t}\n\treturn buffer.toString().trim();\n    }\n}\n\n```"
                         },
                         "children": []
                     },
