@@ -12,7 +12,7 @@
                     "id": "cip5u6lftu80",
                     "created": 1647826767776,
                     "text": "数组",
-                    "expandState": "collapse",
+                    "expandState": "expand",
                     "layout": null
                 },
                 "children": [
@@ -432,7 +432,7 @@
                     "id": "cip5uoak8wg0",
                     "created": 1647826806300,
                     "text": "双指针",
-                    "expandState": "expand",
+                    "expandState": "collapse",
                     "layout": null
                 },
                 "children": [
@@ -692,9 +692,79 @@
                     "created": 1647826855412,
                     "text": "回溯算法",
                     "expandState": "expand",
-                    "layout": null
+                    "layout": null,
+                    "note": "```\nclass Solution {\n    List<List<Integer>> result = new ArrayList<>();\n    LinkedList<Integer> path = new LinkedList<>();\n    public List<List<Integer>> combine(int n, int k) {\n        combineHelper(n, k, 1);\n        return result;\n    }\n\n    /**\n     * 每次从集合中选取元素，可选择的范围随着选择的进行而收缩，调整可选择的范围，就是要靠startIndex\n     * @param startIndex 用来记录本层递归的中，集合从哪里开始遍历（集合就是[1,...,n] ）。\n     */\n    private void combineHelper(int n, int k, int startIndex){\n        //终止条件\n        if (path.size() == k){\n            result.add(new ArrayList<>(path));\n            return;\n        }\n        for (int i = startIndex; i <= n - (k - path.size()) + 1; i++){\n            path.add(i);\n            combineHelper(n, k, i + 1);\n            path.removeLast();\n        }\n    }\n}\n```"
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "ciwcvaww83s0",
+                            "created": 1648557523006,
+                            "text": "77 组合",
+                            "progress": 5,
+                            "note": "```\nclass Solution {\n\n    List<List<Integer>> result = new ArrayList<>();\n    List<Integer> path = new ArrayList<>();\n    public List<List<Integer>> combine(int n, int k) {\n        backtracing(n,k,1);\n        return result;\n    }\n\n    void backtracing(int n,int k,int startIndex){\n        if (path.size()==k){\n            result.add(new ArrayList(path));\n\n            return;\n        }\n        for(int i = startIndex;i<=n-(k-path.size())+1;i++){\n        \n            path.add(i);\n            backtracing(n,k,i+1);\n            path.remove(path.size()-1);\n        }\n    }\n}\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciwcvdt9cjc0",
+                            "created": 1648557529317,
+                            "text": "组合总数3",
+                            "progress": 3,
+                            "note": "```\nclass Solution {\n    List<List<Integer>> result = new ArrayList<>();\n    List<Integer> path = new ArrayList<>();\n    public List<List<Integer>> combinationSum3(int k, int n) {\n        backtracking(k,n,1);\n        return result;\n    }\n    public void backtracking(int k,int sum,int startIndex){\n        if(sum < 0)return;\n        if(path.size() == k){\n           if(sum == 0)result.add(new ArrayList(path));\n            return;\n        }\n        for(int i = startIndex;i <= 9 - (k - path.size()) + 1;i++){\n            sum -= i;\n            path.add(i);\n            backtracking(k,sum,i + 1);\n            sum += i;\n            path.remove(path.size() - 1);\n        }\n    }\n\n}\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciwcvg4ryw00",
+                            "created": 1648557534367,
+                            "text": "电话号码和字母组合"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciwcvk5eeao0",
+                            "created": 1648557543111,
+                            "text": "组合总数"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciwcvp9y70o0",
+                            "created": 1648557554270,
+                            "text": "组合总数2"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciwcvqy69yw0",
+                            "created": 1648557557912,
+                            "text": "分割回文串"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciwcvxkf0e80",
+                            "created": 1648557572318,
+                            "text": "复原ip地址"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ciwcw2ivk8w0",
+                            "created": 1648557583108,
+                            "text": "子集问题"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
