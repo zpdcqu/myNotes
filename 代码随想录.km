@@ -33,7 +33,8 @@
                                     "text": "35 搜索插入的位置 ",
                                     "progress": 9,
                                     "expandState": "expand",
-                                    "layout": null
+                                    "layout": null,
+                                    "note": "```\nclass Solution {\n    public int searchInsert(int[] nums, int target) {\n       int len = nums.length;\n       int left = 0;\n       int right = len - 1;\n       while(left<=right){\n           int mid = left + (right - left) /2;\n           if(nums[mid]==target){\n               return mid;\n           }else if(nums[mid]<target){\n               left = mid +1;\n           }else {\n               right = mid - 1;\n           }\n       }\n       return right +1;\n    }\n}\n\n```"
                                 },
                                 "children": []
                             },
@@ -42,7 +43,7 @@
                                     "id": "cip62827tig0",
                                     "created": 1647827397881,
                                     "text": "34 在排序数组中查找元素的第一个和最后一个位置",
-                                    "progress": 5,
+                                    "progress": 6,
                                     "note": "```\nclass Solution {\n    public int[] searchRange(int[] nums, int target) {\n        int[] res = new int[]{-1,-1};\n        res[0] = binarySearch(nums,target,true);\n        res[1] = binarySearch(nums,target,false);\n        return res;\n    }\n\n    private int binarySearch(int[] nums,int target,boolean leftOrRight){\n        int res  = -1;\n        int left = 0;\n        int right = nums.length-1;\n        int mid;\n        while(left<=right){\n             mid = left+(right-left)/2;\n            if(target < nums[mid]){\n                right = mid -1;\n            }else if(target > nums[mid]){\n                left = mid +1;\n            }else{\n                res = mid;\n                if(leftOrRight){\n                    right=mid - 1;\n                }else{\n                    left = mid +1;\n                }\n            }\n\n        }\n        return res;\n    }\n}\n\n```",
                                     "expandState": "expand",
                                     "layout": null
@@ -57,7 +58,7 @@
                                     "expandState": "expand",
                                     "layout": null,
                                     "note": "``` java\n\nclass Solution {\n    public int mySqrt(int x) {\n       int low = 0;\n       int high = x;\n       int ans = -1;\n       while(low<=high){\n         int mid = low + (high - low) /2;\n         if ((long)mid * mid<=x){\n             low = mid +1;\n             ans = mid;\n         }else{\n            high = mid -1;\n         }\n       }\n       return ans;\n    }\n}\n\n```",
-                                    "progress": 5
+                                    "progress": 6
                                 },
                                 "children": []
                             },
@@ -123,7 +124,8 @@
                             "id": "ciqx43rbp5s0",
                             "created": 1648005275167,
                             "text": "209 长度最小的子数组",
-                            "note": "```\n\n\nclass Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int sum = 0;\n        int result = Integer.MAX_VALUE;\n         int left = 0;\n        for(int right = 0;right<nums.length;right++){\n            sum+=nums[right];\n            while(sum>=target){\n                result = Math.min(result,right-left+1);\n                sum = sum - nums[left++];\n            }\n        }\n        return result==Integer.MAX_VALUE?0:result;\n    }\n}\n\n```"
+                            "note": "```\n\n\nclass Solution {\n    public int minSubArrayLen(int target, int[] nums) {\n        int sum = 0;\n        int result = Integer.MAX_VALUE;\n         int left = 0;\n        for(int right = 0;right<nums.length;right++){\n            sum+=nums[right];\n            while(sum>=target){\n                result = Math.min(result,right-left+1);\n                sum = sum - nums[left++];\n            }\n        }\n        return result==Integer.MAX_VALUE?0:result;\n    }\n}\n\n```",
+                            "progress": 5
                         },
                         "children": [
                             {
@@ -186,7 +188,8 @@
                             "id": "ciqx8t4k5kw0",
                             "created": 1648005643844,
                             "text": "206 反转链表",
-                            "progress": 5
+                            "progress": 5,
+                            "note": "```\nclass Solution {\n    public ListNode reverseList(ListNode head) {\n        ListNode pre = null;\n        ListNode next = null;\n        ListNode cur = head;\n        while(cur!=null){\n            next = cur.next;\n            cur.next = pre;\n            pre = cur;\n            cur = next;\n        }\n        return pre;\n    }\n}\n```"
                         },
                         "children": []
                     },
@@ -256,7 +259,7 @@
                             "text": "242 有效的字母异位词",
                             "expandState": "expand",
                             "note": "```\nclass Solution {\n    public boolean isAnagram(String s, String t) {\n        if(s.length()!=t.length()){\n            return false;\n        }\n        char[] sArray = s.toCharArray();\n        char[] tArray = t.toCharArray();\n        int[] record  = new int[26];\n        for(int i = 0; i< sArray.length;i++){\n            record[sArray[i]-'a']+=1;\n        }\n        for(int i = 0; i< tArray.length;i++){\n            record[tArray[i]-'a']-=1;\n        }\n         for(int i = 0; i< tArray.length;i++){\n            if (record[tArray[i]-'a']!=0){\n                return false;\n            }\n        }\n        return true;\n        \n\n    }\n}\n```",
-                            "progress": 5
+                            "progress": 8
                         },
                         "children": [
                             {
@@ -264,7 +267,7 @@
                                     "id": "cithrt7wins0",
                                     "created": 1648266675077,
                                     "text": "383 赎金信",
-                                    "progress": 5,
+                                    "progress": 6,
                                     "note": "```\nclass Solution {\n    public boolean canConstruct(String ransomNote, String magazine) {\n        int[] record = new int[26];\n        for(int i = 0;i<magazine.length();i++){\n            record[magazine.charAt(i)-'a']+=1;\n        }\n        for(int i = 0 ; i<ransomNote.length();i++){\n            record[ransomNote.charAt(i)-'a']-=1;\n            if(record[ransomNote.charAt(i)-'a']<0){\n                return false;\n            }\n        }\n        return true;\n    }\n}\n```"
                                 },
                                 "children": []
@@ -274,7 +277,7 @@
                                     "id": "ciths0w4r480",
                                     "created": 1648266691779,
                                     "text": "49 字母异位词分组",
-                                    "progress": 3,
+                                    "progress": 4,
                                     "note": "```\nclass Solution {\n    public boolean canConstruct(String ransomNote, String magazine) {\n        int[] record = new int[26];\n        for(int i = 0;i<magazine.length();i++){\n            record[magazine.charAt(i)-'a']+=1;\n        }\n        for(int i = 0 ; i<ransomNote.length();i++){\n            record[ransomNote.charAt(i)-'a']-=1;\n            if(record[ransomNote.charAt(i)-'a']<0){\n                return false;\n            }\n        }\n        return true;\n    }\n}\n```"
                                 },
                                 "children": []
@@ -284,8 +287,8 @@
                                     "id": "cithsbz9nvk0",
                                     "created": 1648266715913,
                                     "text": "438 找到字符串中所有字母异位词",
-                                    "note": "```\nclass Solution {\n    public List<List<String>> groupAnagrams(String[] strs) {\n        HashMap<String,ArrayList<String>> map = new HashMap<>();\n        for(String s:strs){\n            char[] ch = s.toCharArray();\n            Arrays.sort(ch);\n            String key = String.valueOf(ch);\n            if(!map.containsKey(key)) map.put(key,new ArrayList<>());\n            map.get(key).add(s);\n        }\n        return new ArrayList(map.values());\n    }\n}\n\n```",
-                                    "progress": 5
+                                    "note": "```\nclass Solution {\n    public List<Integer> findAnagrams(String s, String p) {\n        int n = s.length(), m = p.length();\n        List<Integer> res = new ArrayList<>();\n        if(n < m) return res;\n\n        int[] pCnt = new int[26];\n        int[] sCnt = new int[26];\n\n        for(int i = 0; i < m; i++){\n            pCnt[p.charAt(i) - 'a'] ++;\n        }\n\n        int left = 0;\n        for(int right = 0; right < n; right++){\n            int curRight = s.charAt(right) - 'a';\n            sCnt[curRight]++;\n            while(sCnt[curRight] > pCnt[curRight]){\n                int curLeft = s.charAt(left) - 'a';\n                sCnt[curLeft]--;\n                left++;\n            }\n            if(right - left + 1 == m){\n                res.add(left);\n            }\n        }\n        return res;\n    }\n}\n\n```",
+                                    "progress": 7
                                 },
                                 "children": []
                             }
@@ -375,9 +378,9 @@
                         "data": {
                             "id": "cithxd76t4w0",
                             "created": 1648267110390,
-                            "text": "反转字符串2",
+                            "text": "541 反转字符串2",
                             "progress": 5,
-                            "note": "```\nclass Solution {\n    public String reverseStr(String s, int k) {\n        char[] arr = s.toCharArray();\n        int len = arr.length;\n        for(int i = 0; i<len;i+=2*k){\n            reverse(arr,i,Math.min(i+k,len)-1);\n        }\n        return new String(arr);\n    }\n    private void reverse(char[] arr,int start,int end){\n        while(start<end){\n            char temp = arr[start];\n            arr[start] = arr[end];\n            arr[end] = temp;\n            start++;\n            end--;\n        }\n    }\n}\n```"
+                            "note": "```\nclass Solution {\n   public String reverseStr(String s, int k) {\n        char[] ch = s.toCharArray();\n        for(int i = 0; i < ch.length; i += 2 * k){\n            int start = i;\n            //这里是判断尾数够不够k个来取决end指针的位置\n            int end = Math.min(ch.length - 1, start + k - 1);\n            //用异或运算反转 \n            while(start < end){\n                ch[start] ^= ch[end];\n                ch[end] ^= ch[start];\n                ch[start] ^= ch[end];\n                start++;\n                end--;\n            }\n        }\n        return new String(ch);\n    }\n}\n```"
                         },
                         "children": []
                     },
@@ -386,7 +389,7 @@
                             "id": "cithxl41uog0",
                             "created": 1648267127614,
                             "text": "剑指offer 05  替换空格",
-                            "progress": 5,
+                            "progress": 9,
                             "note": "```\nclass Solution {\n    public String replaceSpace(String s) {\n        int len = s.length();\n        StringBuilder sb = new StringBuilder();\n\n        for(int i=0;i<len;i++){\n            char c = s.charAt(i);\n            if (c==' ' ){\n                sb.append(\"%20\");\n            }else{\n                sb.append(c);\n            }\n        }\n        return sb.toString();\n    }\n}\n\n```"
                         },
                         "children": []
@@ -432,7 +435,7 @@
                     "id": "cip5uoak8wg0",
                     "created": 1647826806300,
                     "text": "双指针",
-                    "expandState": "collapse",
+                    "expandState": "expand",
                     "layout": null
                 },
                 "children": [
@@ -514,7 +517,7 @@
                             "created": 1648292775516,
                             "text": "226 反转二叉树",
                             "note": "```\nclass Solution {\n    public TreeNode invertTree(TreeNode root) {\n        if (root == null ) return null;\n        TreeNode rightTree = root.right;\n        root.right = invertTree(root.left);\n        root.left = invertTree(rightTree);\n        return root;\n    }\n}\n```",
-                            "progress": 4
+                            "progress": 5
                         },
                         "children": []
                     },
@@ -544,7 +547,7 @@
                             "created": 1648292849976,
                             "text": "111 二叉树的最小深度",
                             "note": "```\nclass Solution {\n    public int minDepth(TreeNode root) {\n        if (root  == null ) {\n            return 0 ;\n        }\n        if (root.left == null && root.right != null) {\n            return 1+ minDepth(root.right);\n        }\n        if (root.left != null && root.right ==null){\n            return 1 + minDepth(root.left);\n        }\n        return 1+ Math.min(minDepth(root.left),minDepth(root.right));\n    } \n}\n```",
-                            "progress": 5
+                            "progress": 6
                         },
                         "children": []
                     },
@@ -552,7 +555,9 @@
                         "data": {
                             "id": "citr23zym4g0",
                             "created": 1648292872172,
-                            "text": "222 完全二叉树的节点个数"
+                            "text": "222 完全二叉树的节点个数",
+                            "note": "```\nclass Solution {\n    public int countNodes(TreeNode root) {\n        if(root==null) return 0;\n        int count = 0;\n        TreeNode left = root.left;\n        TreeNode right = root.right;\n\n        if(left!=null){\n            count += countNodes(left);\n        }\n        if (right!=null){\n            count += countNodes(right);\n        }\n        return count+1;\n    }\n}\n```",
+                            "progress": 8
                         },
                         "children": []
                     },
@@ -560,7 +565,12 @@
                         "data": {
                             "id": "citr2euavv40",
                             "created": 1648292895774,
-                            "text": "110平衡二叉树"
+                            "text": "110平衡二叉树",
+                            "note": "```\nclass Solution {\n    public boolean isBalanced(TreeNode root) {\n        if (root == null)  return true;\n\n        TreeNode left = root.left;\n        TreeNode right = root.right;\n        if(Math.abs(maxDepth(left)-maxDepth(right))>1){\n            return false;\n        }else{\n            return isBalanced(left) && isBalanced(right);\n        }\n        \n    }\n\n    public int maxDepth(TreeNode root){\n        return root==null?0:Math.max(maxDepth(root.left),maxDepth(root.right))+1;\n    }\n}\n```",
+                            "progress": 7,
+                            "resource": [
+                                "👌"
+                            ]
                         },
                         "children": []
                     },
@@ -568,7 +578,9 @@
                         "data": {
                             "id": "citr2rfl5r40",
                             "created": 1648292923183,
-                            "text": "257 二叉树的所有路径"
+                            "text": "257 二叉树的所有路径",
+                            "note": "```\nclass Solution {\n\n    List<String> res  = new ArrayList<>();\n    public List<String> binaryTreePaths(TreeNode root) {\n        StringBuilder sb = new StringBuilder();\n        List<String> list = new ArrayList<>();\n        dfs(list,sb,root);\n        return list;\n    }\n\n    public void dfs(List<String> res,StringBuilder sb,TreeNode root){\n        if (root == null) return;\n        if (root.left==null && root.right==null){\n            res.add(sb.append(root.val).toString());\n        }\n        sb.append(root.val).append(\"->\");\n        dfs(res,new StringBuilder(sb.toString()),root.left);\n        dfs(res,new StringBuilder(sb.toString()),root.right);\n    }\n}\n```",
+                            "progress": 5
                         },
                         "children": []
                     },
@@ -576,7 +588,9 @@
                         "data": {
                             "id": "citr3ai3p2g0",
                             "created": 1648292964694,
-                            "text": "404 左叶子之和"
+                            "text": "404 左叶子之和",
+                            "note": "```\nclass Solution {\n    int sum = 0;\n    public int sumOfLeftLeaves(TreeNode root) {\n        sum(root);\n        return sum;\n    }\n\n    public void sum(TreeNode root){\n        if (root == null){\n            return;\n        }\n        if (root.left!=null&&root.left.left==null&&root.left.right==null){\n            sum+=root.left.val;  \n        }\n         sum(root.left);\n        sum(root.right);\n    }\n}\n```",
+                            "progress": 5
                         },
                         "children": []
                     },
@@ -584,7 +598,9 @@
                         "data": {
                             "id": "citr3w6s01s0",
                             "created": 1648293011898,
-                            "text": "513 找树左下角的值"
+                            "text": "513 找树左下角的值",
+                            "progress": 4,
+                            "note": "```\nclass Solution {\n\n    public int findBottomLeftValue(TreeNode root) {\n        Queue<TreeNode> queue = new LinkedList<>();\n        queue.offer(root);\n        while(!queue.isEmpty()){\n            root = queue.poll();\n            if(root.right!=null) queue.offer(root.right);\n            if(root.left!=null) queue.offer(root.left);\n        }\n        return root.val;\n    }\n    \n}\n```"
                         },
                         "children": []
                     },
@@ -592,7 +608,9 @@
                         "data": {
                             "id": "citr46bt6j40",
                             "created": 1648293033970,
-                            "text": "112 路径之和"
+                            "text": "112 路径之和",
+                            "note": "```\nclass Solution {\n    public boolean hasPathSum(TreeNode root, int sum) {\n        if(root==null){\n            return false;\n\n        }\n        if(root.left==null && root.right ==null){\n            return sum-root.val == 0;\n        }\n        return hasPathSum(root.left,sum-root.val)||hasPathSum(root.right,sum-root.val);\n    }\n}\n```",
+                            "progress": 4
                         },
                         "children": []
                     },
@@ -728,7 +746,9 @@
                         "data": {
                             "id": "ciwcvg4ryw00",
                             "created": 1648557534367,
-                            "text": "电话号码和字母组合"
+                            "text": "17 电话号码和字母组合",
+                            "note": "```\nclass Solution {\n    String[] wordsMap = {\" \",\"*\",\"abc\",\"def\",\"ghi\",\"jkl\",\"mno\",\"pqrs\",\"tuv\",\"wxyz\"};\n        List<String> res = new ArrayList<>();\n\n        public List<String> letterCombinations(String digits) {\n            if(digits==null || digits.length()==0){\n                return res;\n            }\n            iterStr(digits,new StringBuilder(),0);\n            return res;\n        }\n\n        public void iterStr(String str, StringBuilder letter, int index) {\n            if(index==str.length()){\n                res.add(letter.toString());\n                return;\n            }\n            String worsString=wordsMap[str.charAt(index)-'0'];\n            for(int i=0;i<worsString.length();i++){\n                letter.append(worsString.charAt(i));\n                iterStr(str,letter,index+1);\n                letter.deleteCharAt(letter.length()-1);\n            }\n        }\n\n}\n```",
+                            "progress": 5
                         },
                         "children": []
                     },
@@ -736,7 +756,9 @@
                         "data": {
                             "id": "ciwcvk5eeao0",
                             "created": 1648557543111,
-                            "text": "组合总数"
+                            "text": "39 组合总和",
+                            "note": "```\nclass Solution {\n\n    List<List<Integer>> res = new ArrayList<>();\n    List<Integer> path = new ArrayList<>();\n\n    public List<List<Integer>> combinationSum(int[] candidates, int target) {\n        Arrays.sort(candidates);\n        backtracing(candidates,target,0);\n        return res;\n    }\n\n    public void backtracing(int[] candidates,int target,int startIndex){\n        if(target<0){\n            return;\n        }\n        if(target == 0){\n            res.add(new ArrayList(path));\n            return;\n        }\n        for(int i = startIndex;i<candidates.length;i++){\n            path.add(candidates[i]);\n            backtracing(candidates,target-candidates[i],i);\n            path.remove(path.size()-1);\n        }\n\n    }\n}\n```",
+                            "progress": 5
                         },
                         "children": []
                     },
@@ -782,7 +804,128 @@
                     "expandState": "expand",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cj1yvsfwqmo0",
+                            "created": 1649127425362,
+                            "text": "分发饼干"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yvwy5rao0",
+                            "created": 1649127435173,
+                            "text": "最大子序和"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yw6ip5aw0",
+                            "created": 1649127456006,
+                            "text": "买卖股票的最佳时机2"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1ywbh2ryg0",
+                            "created": 1649127466792,
+                            "text": "跳跃游戏"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1ywff39ns0",
+                            "created": 1649127475379,
+                            "text": "跳跃游戏2"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1ywhlcbcw0",
+                            "created": 1649127480110,
+                            "text": "k次取反后最大化的数组和"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1ywrifbdc0",
+                            "created": 1649127501702,
+                            "text": "加油站"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1ywtho07k0",
+                            "created": 1649127506010,
+                            "text": "柠檬水找零"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1ywxb99m80",
+                            "created": 1649127514329,
+                            "text": "根据身高重建队列"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yx1r3xps0",
+                            "created": 1649127523995,
+                            "text": "用最少数量的箭引爆气球"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yx9tx2co0",
+                            "created": 1649127541579,
+                            "text": "无重叠区域"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yxbsj6e80",
+                            "created": 1649127545849,
+                            "text": "划分字母区间"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yxkbnrrk0",
+                            "created": 1649127564420,
+                            "text": "单调递增的数字"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yxvh4vqo0",
+                            "created": 1649127588695,
+                            "text": "买卖股票的最佳时机含手续费"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yy59gt9s0",
+                            "created": 1649127609999,
+                            "text": "监控二叉树"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
@@ -792,7 +935,272 @@
                     "expandState": "expand",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cj1yydy7ezc0",
+                            "created": 1649127628909,
+                            "text": "斐波那些数列"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yyjto4ow0",
+                            "created": 1649127641696,
+                            "text": "爬楼梯"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yylgxotk0",
+                            "created": 1649127645279,
+                            "text": "使用最小花费爬楼梯"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yzc8uao80",
+                            "created": 1649127703563,
+                            "text": "不同路径"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yzeozg0g0",
+                            "created": 1649127708893,
+                            "text": "不同路径2"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yzgnz90o0",
+                            "created": 1649127713186,
+                            "text": "整数拆分"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yzkpx2ao0",
+                            "created": 1649127722010,
+                            "text": "不同的二叉搜索树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yzqjjboo0",
+                            "created": 1649127734685,
+                            "text": "背包理论基础"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1yzv27c3c0",
+                            "created": 1649127744521,
+                            "text": "分割等和子集"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z0170fu00",
+                            "created": 1649127757872,
+                            "text": "最后一块石头的重量"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z07woi0w0",
+                            "created": 1649127772485,
+                            "text": "目标和"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z09i2muw0",
+                            "created": 1649127775955,
+                            "text": "一和零"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z0lion2o0",
+                            "created": 1649127802114,
+                            "text": "完全背包理论基础"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z0puatvc0",
+                            "created": 1649127811523,
+                            "text": "两千兑换2"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z0rxgrnc0",
+                            "created": 1649127816068,
+                            "text": "组合总和4"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z0xutujs0",
+                            "created": 1649127828969,
+                            "text": "爬楼梯"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z12j743s0",
+                            "created": 1649127839150,
+                            "text": "零钱兑换"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z143qzeg0",
+                            "created": 1649127842569,
+                            "text": "完全平方数"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z164vf8g0",
+                            "created": 1649127846991,
+                            "text": "单词拆分"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1axnn8o0",
+                            "created": 1649127857438,
+                            "text": "多重背包理论"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1eavths0",
+                            "created": 1649127864769,
+                            "text": "打家劫舍"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1hewdmw0",
+                            "created": 1649127871542,
+                            "text": "打家劫舍2"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1j9b4j40",
+                            "created": 1649127875557,
+                            "text": "打家劫舍3"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1l03gp40",
+                            "created": 1649127879354,
+                            "text": "买卖股票的最佳时机"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1oxikrk0",
+                            "created": 1649127887905,
+                            "text": "最长上升子序列"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1v42uf40",
+                            "created": 1649127901362,
+                            "text": "最长连续递增序列"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z241raw00",
+                            "created": 1649127920813,
+                            "text": "最长公共子序列"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z1zr6nbs0",
+                            "created": 1649127911467,
+                            "text": "不想交的线"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z27ep4rk0",
+                            "created": 1649127928126,
+                            "text": "判断子序列"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z2fk5y0o0",
+                            "created": 1649127945871,
+                            "text": "两个字符串的删除操作"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z2j3ppqw0",
+                            "created": 1649127953583,
+                            "text": "编辑距离"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z2lcjqs00",
+                            "created": 1649127958471,
+                            "text": "回文字符串"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cj1z2op72m00",
+                            "created": 1649127965766,
+                            "text": "最长回文子序列"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
