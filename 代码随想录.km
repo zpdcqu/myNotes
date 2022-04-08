@@ -940,7 +940,7 @@
                         "data": {
                             "id": "cj1yydy7ezc0",
                             "created": 1649127628909,
-                            "text": "斐波那些数列"
+                            "text": "斐波那契数列"
                         },
                         "children": []
                     },
@@ -1214,7 +1214,7 @@
             }
         ]
     },
-    "template": "default",
+    "template": "filetree",
     "theme": "classic-compact",
     "version": "1.4.43"
 }
