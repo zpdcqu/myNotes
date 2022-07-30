@@ -1,1 +1,1 @@
-{:highlights []}
+{:highlights [{:id #uuid "62e53a61-442e-41ab-80f1-e7d58f0ff1b4", :page 22, :position {:bounding {:x1 486.4574890136719, :y1 450.6187438964844, :x2 918.45751953125, :y2 498.6187438964844, :width 1049.04, :height 1332.48}, :rects ({:x1 486.4574890136719, :y1 450.6187438964844, :x2 918.45751953125, :y2 498.6187438964844, :width 1049.04, :height 1332.48}), :page 22}, :content {:text "从这里开始，起飞了"}, :properties {:color "yellow"}}]}
