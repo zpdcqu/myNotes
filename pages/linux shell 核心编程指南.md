@@ -1,4 +1,4 @@
-- 书文件 ![835107 Linux Shell核心编程指南.pdf](../assets/Linux_Shell核心编程指南_1659189515028_0.pdf)
+- 书文件 ![Linux Shell核心编程指南.pdf](../assets/Linux_Shell核心编程指南_1659189515028_0.pdf)
 - [[目录]]
 -
 -
