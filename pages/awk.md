@@ -1,3 +1,3 @@
 - ```
-  awk [option] 'condition '
+  awk [option] 'condition[sript] condition[script]  file'
   ```
