@@ -1,1 +1,1 @@
-{:highlights []}
+{:highlights [{:id #uuid "62e5378c-9b5c-466e-8dc9-962016a29b9b", :page 93, :position {:bounding {:x1 197.53125, :y1 567.25, :x2 648.481689453125, :y2 604.25, :width 1049.04, :height 1332.48}, :rects ({:x1 456.484375, :y1 567.25, :x2 529.9629516601562, :y2 604.25, :width 1049.04, :height 1332.48} {:x1 197.53125, :y1 570.375, :x2 648.481689453125, :y2 598.375, :width 1049.04, :height 1332.48}), :page 93}, :content {:text "实战案例：如何监控 HTTP 服务状态"}, :properties {:color "yellow"}}]}
