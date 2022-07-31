@@ -1,13 +1,1 @@
-- 1. -e或-expression=：表示用指定命令或者脚本来处理输入的文本文件
-  ​ 2. -f或-file=：表示用指定的脚本文件来处理输入的文本文件
-  ​ 3.-h或-help：显示帮助
-  ​ 4.-n、–quite或silent：表示仅显示处理后的结果
-  ​ 5.-i ：直接编辑文本文件
-  ​ 操作，用于指定具体的动作行为，通常情况下采用”[n1[,n2]]“操作参数的格式。具体如下：
-  ​ 6.a：增加，在当前行下增加一行指定内容
-  ​ 7.c：替换，将选定行替换为指定内容
-  ​ 8.d：删除，删除选定的行
-  ​ 9.i：插入，在选定行上面插入一行指定内容
-  ​ 10.p：打印，如果同时指定行，表达打印指定行；如果不指定行，则表示打印所有内容；如果有非打印字符，则以ASCII码输出。通常与-n一起使用
-  ​ 11.s：替换，替换指定字符
-  ​ 12.y：字符转换
+- [sed 常用用法](https://blog.csdn.net/obsessiveY/article/details/103500698?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-103500698-blog-124284715.pc_relevant_multi_platform_featuressortv2removedup&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-103500698-blog-124284715.pc_relevant_multi_platform_featuressortv2removedup&utm_relevant_index=9)
