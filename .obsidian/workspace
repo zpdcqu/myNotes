@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "b1404a252bfa8cea",
+    "type": "split",
+    "children": [
+      {
+        "id": "7700d4eddd091d63",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "ec9ab52ebac2491c",
+        "type": "leaf",
+        "state": {
+          "type": "pdf",
+          "state": {
+            "file": "assets/Linux_Shell核心编程指南_1659189515028_0.pdf"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "304994e902a211a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "d979a0b8ef86c4c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e4555f50dc1a04d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b95cc5bb862515d7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fcf1d546aa88670e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "63005ba031985474",
+    "type": "split",
+    "children": [
+      {
+        "id": "cbca1e9f547a49ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7f683d837754c7d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9a2abd98ecab165f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8a674c91bd1db330",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a55d826ec6fb0665",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "7700d4eddd091d63",
+  "lastOpenFiles": [
+    "assets/Linux_Shell核心编程指南_1659189515028_0.pdf",
+    "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
+    "pages/awk.md",
+    "分库分表/分库分表.md",
+    "pages/contents.md",
+    "pages/linux shell 核心编程指南.md",
+    "pages/目录.md",
+    "海量文件处理/相同的URL.md",
+    "海量文件处理/0总结.md"
+  ]
+}
