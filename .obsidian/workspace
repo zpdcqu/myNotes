@@ -9,19 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
+            "file": "分库分表/分库分表.md",
             "mode": "source",
             "source": false
-          }
-        }
-      },
-      {
-        "id": "ec9ab52ebac2491c",
-        "type": "leaf",
-        "state": {
-          "type": "pdf",
-          "state": {
-            "file": "assets/Linux_Shell核心编程指南_1659189515028_0.pdf"
           }
         }
       }
@@ -87,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
+                "file": "分库分表/分库分表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
+                "file": "分库分表/分库分表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md"
+                "file": "分库分表/分库分表.md"
               }
             }
           }
@@ -141,9 +131,9 @@
   "active": "7700d4eddd091d63",
   "lastOpenFiles": [
     "assets/Linux_Shell核心编程指南_1659189515028_0.pdf",
+    "分库分表/分库分表.md",
     "pages/hls__Linux_Shell核心编程指南_1659189515028_0.md",
     "pages/awk.md",
-    "分库分表/分库分表.md",
     "pages/contents.md",
     "pages/linux shell 核心编程指南.md",
     "pages/目录.md",
